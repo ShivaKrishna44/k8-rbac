@@ -4,16 +4,16 @@ data:
     - groups:
       - system:bootstrappers
       - system:nodes
-      rolearn: arn:aws:iam::658643245214:role/eksctl-expense-nodegroup-expense-NodeInstanceRole-EScxWPzMWp1o
+      rolearn: arn:aws:eks:us-east-1:658643245214:capability/expense/*/*/*
       username: system:node:{{EC2PrivateDNSName}}
   mapUsers: |
     - groups:
       - default-job
       userarn: arn:aws:iam::658643245214:user/nonexpert
-      username: shivakrishna44
+      username: nonexpert
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2025-03-14T01:43:26Z"
+  creationTimestamp: "2026-02-15T01:43:26Z"
   name: aws-auth
   namespace: kube-system
   uid: 50845162-1701-4375-9fdd-e93f835164a1
